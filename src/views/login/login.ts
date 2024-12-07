@@ -1,8 +1,9 @@
 import { Router } from "@aurelia/router";
-import { resolve } from "aurelia";
+import { inject } from "aurelia";
 
+@inject(Router)
 export class Login {
-  private readonly router: Router = resolve(Router);
+  constructor(private router: Router) {}
 
   private validUser = {
     email: "Lukas.Staub@unifr.ch",
@@ -13,10 +14,13 @@ export class Login {
     event.preventDefault();
 
     const email = (document.getElementById("email") as HTMLInputElement).value;
-    const password = (document.getElementById("password") as HTMLInputElement).value;
+    const password = (document.getElementById("password") as HTMLInputElement)
+      .value;
 
-    if (email === this.validUser.email && password === this.validUser.password) {
-      // Weiterleitung zur 2authentification-Seite
+    if (
+      email === this.validUser.email &&
+      password === this.validUser.password
+    ) {
       this.router.load("2authentification");
     } else {
       alert("Error: Wrong email or password");

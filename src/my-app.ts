@@ -1,11 +1,15 @@
-import { Route } from '@aurelia/router';
-import { Login } from './views/login/login';
-import { TwoAuth } from './views/2authetification/2authentification';
+import { IRoute } from '@aurelia/router';
+import { customElement } from 'aurelia';
 
+@customElement({
+  name: 'my-app',
+  template: `<template>
+    <au-viewport></au-viewport>
+  </template>`
+})
 export class MyApp {
-  static routes: Route[] = [
-  
-    { path: 'login', component: Login, title: 'Login' }, // Verwende `component` anstelle von `viewModel`
-    { path: '2authentification', component: TwoAuth, title: '2-Factor Authentication' }, // Verwende ebenfalls `component`
+  static routes: IRoute[] = [
+    { path: ['', 'login'], component: () => import('./views/login/login'), title: 'Login' },
+    { path: '2authentification', component: () => import('./views/2authetification/2authentification'), title: '2-Factor Auth' },
   ];
 }
