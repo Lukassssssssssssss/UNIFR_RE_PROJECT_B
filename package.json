@@ -1,0 +1,39 @@
+{
+  "name": "aurelia-mdc-vite",
+  "description": "An Aurelia 2 client application.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "???"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@aurelia-mdc-web/all": "9.2.3-au2",
+    "@aurelia/router": "^2.0.0-beta.22",
+    "aurelia": "2.0.0-beta.20"
+  },
+  "devDependencies": {
+    "@aurelia/testing": "2.0.0-beta.20",
+    "@aurelia/vite-plugin": "2.0.0-beta.20",
+    "@types/node": "22.7.5",
+    "eslint": "9.12.0",
+    "globals": "15.10.0",
+    "sass": "1.79.4",
+    "stylelint": "16.9.0",
+    "stylelint-config-standard-scss": "13.1.0",
+    "tslib": "2.7.0",
+    "typescript": "5.6.3",
+    "typescript-eslint": "8.8.1",
+    "vite": "5.4.8",
+    "vite-plugin-node-polyfills": "0.22.0"
+  },
+  "scripts": {
+    "lint:js": "eslint src",
+    "lint:css": "stylelint \"src/**/*.scss\"",
+    "lint": "npm run lint:js && npm run lint:css",
+    "pretest": "npm run lint",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "type": "module"
+}
