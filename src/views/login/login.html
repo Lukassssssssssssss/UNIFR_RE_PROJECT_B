@@ -1,0 +1,54 @@
+<!--<template>
+  <require from="./login.scss"></require>
+  <div>Hello from Login page</div>
+  <mdc-button raised click.trigger="myMethod()">Button</mdc-button>
+</template> -->
+
+<template>
+  <!-- Importing the associated SCSS file for styling this component -->
+  <require from="./login.scss"></require>
+
+  <!-- Main container for the login component -->
+  <div class="login-container">
+    <!-- Box that contains the login form and related elements -->
+    <div class="login-box">
+      <!-- Heading for the login section -->
+      <h2>Sign in</h2>
+
+      <!-- Logo for the login page -->
+      <img src="/src/views/login/logo.png" />
+
+      <!-- Description or prompt for the user -->
+      <p>Log into your UNIFR Account</p>
+
+      <!-- Login form that triggers the 'validateUser' method on submit -->
+      <form submit.trigger="validateUser($event)">
+        <!-- Form group for email input -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+
+        <!-- Form group for password input -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <!-- Submit button for the form -->
+        <button type="submit">Sign in</button>
+      </form>
+
+      <!-- Links for password recovery and registration -->
+      <div class="links">
+        <a href="#">Forgot your password?</a>
+        <a href="#">Not registered yet?</a>
+      </div>
+    </div>
+  </div>
+</template>

@@ -11,7 +11,7 @@ export class MyApp {
   static routes: IRoute[] = [
     {
       path: ["", "login"],
-      component: () => import("./views/login"),
+      component: () => import("./views/login/login"),
       title: "Login",
     },
     {
