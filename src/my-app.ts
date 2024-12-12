@@ -10,14 +10,14 @@ import { customElement } from "aurelia";
 export class MyApp {
   static routes: IRoute[] = [
     {
-      path: ["", "login"],
-      component: () => import("./views/login/login"),
+      path: ["", "login"], // Standardroute ("/") und Login-Route
+      component: () => import("./views/login/login"), // Login-Komponente
       title: "Login",
     },
     {
-      path: "2authentification",
-      component: () => import("./views/2authentification/2authentification"),
-      title: "2-Factor Auth",
+      path: "dashboard", // Route für das Dashboard
+      component: () => import("./views/Dashboard/Dashboard"), // Dashboard-Komponente
+      title: "Dashboard",
     },
   ];
 }

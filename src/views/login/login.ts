@@ -1,29 +1,23 @@
-import { Router } from "@aurelia/router";
+import { IRouter } from "@aurelia/router";
 import { inject } from "aurelia";
 
-@inject(Router)
+@inject(IRouter)
 export class Login {
-  constructor(private router: Router) {}
-
-  private validUser = {
-    email: "Lukas.Staub@unifr.ch",
-    password: "password123",
-  };
+  constructor(private router: IRouter) {}
 
   validateUser(event: Event): void {
-    event.preventDefault();
+    event.preventDefault(); // Verhindert das Neuladen der Seite
 
+    // Hier könntest du auch eine Validierung für Login und Passwort einfügen
     const email = (document.getElementById("email") as HTMLInputElement).value;
     const password = (document.getElementById("password") as HTMLInputElement)
       .value;
 
-    if (
-      email === this.validUser.email &&
-      password === this.validUser.password
-    ) {
-      this.router.load("2authentification");
+    if (email && password) {
+      // Leite zur 'dashboard'-Route weiter
+      this.router.load("dashboard");
     } else {
-      alert("Error: Wrong email or password");
+      alert("Bitte geben Sie gültige Anmeldedaten ein!");
     }
   }
 }
