@@ -1,0 +1,74 @@
+<template>
+    <require from="./grade.scss"></require>
+  
+    <div class="grade-container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="/src/views/login/logo.png" alt="UniFr Logo" />
+        </div>
+        <ul class="menu">
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/grade" class="active">Grade</a></li>
+          <li><a href="/billing">Billing</a></li>
+          <li><a href="notifications">Notifications</a></li>
+        </ul>
+        <div class="logout">
+          <button click.trigger="logout()">Log Out</button>
+        </div>
+      </nav>
+  
+      <div class="content">
+        <h1>Your Grades</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Course Name</th>
+              <th>ETCS</th>
+              <th>Grade</th>
+              <th>Passed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Decision Support I</td>
+              <td>5</td>
+              <td>5</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Algorithmic</td>
+              <td>6</td>
+              <td>4</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Mathematics II</td>
+              <td>6</td>
+              <td>4.25</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Statistics</td>
+              <td>4.5</td>
+              <td>3</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Business Informatics I</td>
+              <td>6</td>
+              <td>4</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </template>
+  

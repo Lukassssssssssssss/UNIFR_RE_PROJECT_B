@@ -1,0 +1,74 @@
+<template>
+    <require from="./billing.scss"></require>
+  
+    <div class="billing-container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="/src/views/login/logo.png" alt="UniFr Logo" />
+        </div>
+        <ul class="menu">
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/grade">Grade</a></li>
+          <li><a href="/billing" class="active">Billing</a></li>
+          <li><a href="/notifications">Notifications</a></li>
+        </ul>
+        <div class="logout">
+          <button click.trigger="logout()">Log Out</button>
+        </div>
+      </nav>
+  
+      <div class="content">
+        <h1>Your Bills</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Actions</th>
+              <th>Bill</th>
+              <th>Amount</th>
+              <th>Due Date</th>
+              <th>Confirmation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pay</td>
+              <td>Exam SES</td>
+              <td>100.-</td>
+              <td>11.11.2023</td>
+              <td>Not Paid</td>
+            </tr>
+            <tr>
+              <td>See Details</td>
+              <td>Semester Bill</td>
+              <td>835.-</td>
+              <td>10.10.2023</td>
+              <td>In Process</td>
+            </tr>
+            <tr>
+              <td>See Details</td>
+              <td>Exams SES</td>
+              <td>100.-</td>
+              <td>12.11.2023</td>
+              <td>Paid</td>
+            </tr>
+            <tr>
+              <td>See Details</td>
+              <td>Semester Bill</td>
+              <td>835.-</td>
+              <td>09.10.2023</td>
+              <td>Paid</td>
+            </tr>
+            <tr>
+              <td>See Details</td>
+              <td>Exams SES</td>
+              <td>120.-</td>
+              <td>13.11.2023</td>
+              <td>Paid</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </template>
+  

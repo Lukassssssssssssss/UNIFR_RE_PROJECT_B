@@ -5,6 +5,6 @@ import template from "./Dashboard.html";
 export class Dashboard {
   logout() {
     alert("You have been logged out.");
-    window.location.href = "/";
+    window.location.href = "/"; // Zurück zur Login-Seite
   }
 }

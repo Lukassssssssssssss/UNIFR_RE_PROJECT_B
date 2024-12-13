@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.courses-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #e3f2fd, #b0d7f1); /* Hellblau-Verlauf */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a2a4b; /* Tiefes Blau für Header */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+    .logo img {
+      max-height: 50px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+
+      li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        &.active,
+        &:hover {
+          background-color: #b0d7f1; /* Hellblau für Hover */
+        }
+      }
+    }
+
+    .logout button {
+      background-color: #b0d7f1;
+      color: #1a2a4b; /* Blau für Kontrast */
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #1a2a4b;
+        color: white; /* Weiß für Hover-Text */
+      }
+    }
+  }
+
+  .content {
+    margin-top: 100px;
+    padding: 20px;
+
+    h1 {
+      text-align: center;
+      color: #1a2a4b; /* Tiefes Blau für Text */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      th {
+        background-color: #b0d7f1; /* Hellblau für Header */
+        color: #1a2a4b; /* Dunkelblau für Text */
+        padding: 10px;
+      }
+
+      td,
+      th {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      tr:nth-child(even) {
+        background-color: #eaf5fc; /* Noch helleres Blau für Abwechslung */
+      }
+
+      tr:hover {
+        background-color: #d6ebf9; /* Mittleres Blau beim Hover */
+      }
+    }
+  }
+}

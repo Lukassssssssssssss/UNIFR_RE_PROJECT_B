@@ -1,0 +1,40 @@
+<template>
+    <require from="./notifications.scss"></require>
+  
+    <div class="notifications-container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="/src/views/login/logo.png" alt="UniFr Logo" />
+        </div>
+        <ul class="menu">
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/grade">Grade</a></li>
+          <li><a href="/billing">Billing</a></li>
+          <li><a href="/notifications" class="active">Notifications</a></li>
+        </ul>
+        <div class="logout">
+          <button click.trigger="logout()">Log Out</button>
+        </div>
+      </nav>
+  
+      <div class="content">
+        <h1>Your Notifications</h1>
+        <ul class="notification-list">
+          <li>
+            <span class="date">11.12.2023</span>
+            <p>You have an upcoming exam for "Algorithmic" on 15.12.2023.</p>
+          </li>
+          <li>
+            <span class="date">10.12.2023</span>
+            <p>Your payment for "Semester Bill" has been processed.</p>
+          </li>
+          <li>
+            <span class="date">09.12.2023</span>
+            <p>New course materials for "Mathematics II" are available.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </template>
+  

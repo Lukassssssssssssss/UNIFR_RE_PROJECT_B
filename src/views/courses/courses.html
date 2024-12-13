@@ -1,0 +1,73 @@
+<template>
+  <require from="./courses.scss"></require>
+
+  <div class="courses-container">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/src/views/login/logo.png" alt="UniFr Logo" />
+      </div>
+      <ul class="menu">
+        <li><a href="/dashboard">Home</a></li>
+        <li><a href="/courses" class="active">Courses</a></li>
+        <li><a href="/grade">Grade</a></li>
+        <li><a href="/billing">Billing</a></li>
+        <li><a href="/notifications">Notifications</a></li>
+      </ul>
+      <div class="logout">
+        <button click.trigger="logout()">Log Out</button>
+      </div>
+    </nav>
+
+    <div class="content">
+      <h1>Available Courses</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Course Name</th>
+            <th>ETCS</th>
+            <th>Availability</th>
+            <th>Prerequisite</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enroll</td>
+            <td>Decision Support I</td>
+            <td>5</td>
+            <td>29/40</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Enroll</td>
+            <td>Algorithmic</td>
+            <td>6</td>
+            <td>No Restrictions</td>
+            <td>Fulfilled</td>
+          </tr>
+          <tr>
+            <td>Enroll</td>
+            <td>Mathematics II</td>
+            <td>6</td>
+            <td>No Restrictions</td>
+            <td>Not fulfilled</td>
+          </tr>
+          <tr>
+            <td>Enrolled In</td>
+            <td>Statistics</td>
+            <td>4.5</td>
+            <td>No Restrictions</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Enroll</td>
+            <td>Business Informatics I</td>
+            <td>6</td>
+            <td>30/30</td>
+            <td>None</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>

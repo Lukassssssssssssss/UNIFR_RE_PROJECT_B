@@ -10,14 +10,35 @@ import { customElement } from "aurelia";
 export class MyApp {
   static routes: IRoute[] = [
     {
-      path: ["", "login"], // Standardroute ("/") und Login-Route
-      component: () => import("./views/login/login"), // Login-Komponente
+      path: ["", "login"],
+      component: () => import("./views/login/login"),
       title: "Login",
     },
     {
-      path: "dashboard", // Route für das Dashboard
-      component: () => import("./views/Dashboard/Dashboard"), // Dashboard-Komponente
+      path: "dashboard",
+      component: () => import("./views/Dashboard/Dashboard"),
       title: "Dashboard",
+    },
+    {
+      path: "courses",
+      component: () => import("./views/courses/courses"),
+      title: "Courses",
+    },
+    {
+      path: "grade",
+      component: () => import("./views/grade/grade"),
+      title: "Grade",
+    },
+    {
+      path: "billing",
+      component: () => import("./views/billing/billing"),
+      title: "Billing",
+    },
+    {
+      path: "notifications",
+      component: () => import("./views/notifications/notifications"),
+      title: "Notifications",
     },
   ];
 }
+

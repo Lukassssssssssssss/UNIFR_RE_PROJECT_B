@@ -1,102 +1,94 @@
-.dashboard-container {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
   font-family: Arial, sans-serif;
-  color: #333;
+}
+
+.dashboard-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url("/src/views/Dashboard/unibild.png") no-repeat center center
-    fixed; /* Hintergrundbild */
-  background-size: cover; /* Bild deckt den ganzen Hintergrund ab */
-  padding: 30px;
-}
+  background: url("/src/views/Dashboard/unibild.png") no-repeat center center fixed;
+  background-size: cover;
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(75, 75, 75, 0.8); /* Transparente Navbar */
-  color: white;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(75, 75, 75, 0.9);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 
-.navbar .logo img {
-  max-height: 70px; /* Größeres Logo */
-}
+    .logo img {
+      max-height: 50px;
+    }
 
-.navbar .menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
 
-.navbar .menu li {
-  display: inline;
-}
+      li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
 
-.navbar .menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-}
+        &.active,
+        &:hover {
+          background-color: #f6a821;
+        }
+      }
+    }
 
-.navbar .menu a.active,
-.navbar .menu a:hover {
-  background-color: #f6a821;
-  border-radius: 5px;
-}
+    .logout button {
+      background-color: #f6a821;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
 
-.navbar .logout button {
-  background-color: #f6a821;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+      &:hover {
+        background-color: #4b4b4b;
+      }
+    }
+  }
 
-.dashboard-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  margin-top: 20px;
-}
+  .content {
+    margin-top: 80px; /* Platz für Navbar */
+    padding: 30px;
+  }
 
-.notifications {
-  background: #e9ecef;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  .dashboard-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-.notifications label {
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
-}
+    .notifications {
+      background: #e9ecef;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-.notifications ul {
-  list-style: none;
-  padding: 0;
-}
-
-.notifications li {
-  margin: 5px 0;
-  color: #555;
-}
-
-.welcome-box {
-  text-align: center;
-  background-color: rgba(246, 168, 33, 0.9); /* Transparenter Hintergrund */
-  color: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
-}
-
-.welcome-box:hover {
-  transform: scale(1.05); /* Hover-Effekt */
+    .welcome-box {
+      text-align: center;
+      background-color: rgba(246, 168, 33, 0.9);
+      color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
