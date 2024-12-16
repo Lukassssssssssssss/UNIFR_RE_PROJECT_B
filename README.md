@@ -1,9 +1,9 @@
-# aurelia-mdc-vite
+# UniFR RE Project B
 
 This project is bootstrapped by [aurelia/new](https://github.com/aurelia/new).
 
 ## Project Repository
-Find the project on GitHub: [CampusNext Repository](https://github.com/Lukassssssssssssss/campusnext.git)
+Find the project on GitHub: [UNIFR_RE_PROJECT_B Repository](https://github.com/Lukassssssssssssss/UNIFR_RE_PROJECT_B)
 
 ## Prerequisites
 Ensure you have the following installed on your machine:
@@ -13,11 +13,11 @@ Ensure you have the following installed on your machine:
 ## Installation Instructions
 1. **Clone the Repository**  
    Open your terminal and run:
-   git clone https://github.com/Lukassssssssssssss/campusnext.git
+   git ```clone``` https://github.com/Lukassssssssssssss/UNIFR_RE_PROJECT_B
 
 2. **Navigate to the project Directory**  
    Change to the directory where the repository was cloned:
-   cd campusnext
+   cd UNIFR_RE_PROJECT_B
 
 3. **Install Dependencies** 
     Install the necessary dependencies by running:
@@ -28,23 +28,17 @@ Ensure you have the following installed on your machine:
     npm start
     Once the server is running, open your browser and navigate to:
     http://localhost:5173
-    
-5. **Build for Production**
-    To create an optimized build for production, execute: 
-    npm run build
-    The output will be available in the dist directory.
 
 ## Features
-- Sign into their accounts.
+- Sign into your account (now it works as long as you login using an E-Mail format). 
 - Access key parts of the system at all times.  
 - Able to log out at all times. 
-- Browse available courses and enroll in them.
-- View important system or admin messages.
-- Access grade details and course performance.
-- Receive your bills and pay them here. 
+- Browse available courses and enroll in them. You'll be able to see which courses are available and which you've already enlisted in. 
+- View important system or admin messages. You'll be met with a small window where you can see if you have any new messages. And you can head over to the "Notifications" part and check out all your messages.  
+- Access grade details and course performance. You'll be able to see what courses have already been evaluated and which ones you haven't. You'll also see if you've passed or not. 
+- Receive your bills and check their status (paid or not paid).  
 
 ## Project Structure
-
 The project follows a modular structure using **Aurelia** for building the frontend and **Vite** for fast bundling. 
 
 Overview of the key directories and files:
@@ -54,8 +48,8 @@ Overview of the key directories and files:
     - `login/`: Contains the login form and related components.
     - `Dashboard/`: The dashboard page where notifications and user data are displayed.
     - `courses/`: Displays available courses and allows enrollment.
-    - `grade/`: Displays grade-related information (currently under development).
-    - `billing/`: Manages billing information (currently under development).
+    - `grade/`: Displays grade-related information.
+    - `billing/`: Manages billing information.
     - `notifications/`: Displays notifications from the system or administrators.
   - styles: Every view has a SCSS file for styling.
 
