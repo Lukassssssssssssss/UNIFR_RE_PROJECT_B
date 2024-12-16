@@ -13,19 +13,19 @@ Ensure you have the following installed on your machine:
 ## Installation Instructions
 1. **Clone the Repository**  
    Open your terminal and run:
-   git ```clone``` https://github.com/Lukassssssssssssss/UNIFR_RE_PROJECT_B
+   ```git clone``` https://github.com/Lukassssssssssssss/UNIFR_RE_PROJECT_B
 
 2. **Navigate to the project Directory**  
    Change to the directory where the repository was cloned:
-   cd UNIFR_RE_PROJECT_B
+   ```cd``` UNIFR_RE_PROJECT_B
 
 3. **Install Dependencies** 
     Install the necessary dependencies by running:
-    npm install
+    ```npm install```
 
 4. **Start the Development Server** 
     To start the dev server with hot module replacement enabled, run:
-    npm start
+    ```npm start```
     Once the server is running, open your browser and navigate to:
     http://localhost:5173
 
@@ -36,11 +36,9 @@ Ensure you have the following installed on your machine:
 - Browse available courses and enroll in them. You'll be able to see which courses are available and which you've already enlisted in. 
 - View important system or admin messages. You'll be met with a small window where you can see if you have any new messages. And you can head over to the "Notifications" part and check out all your messages.  
 - Access grade details and course performance. You'll be able to see what courses have already been evaluated and which ones you haven't. You'll also see if you've passed or not. 
-- Receive your bills and check their status (paid or not paid).  
+- Here you can look at all your bills and also check their status (paid or not paid).  
 
 ## Project Structure
-The project follows a modular structure using **Aurelia** for building the frontend and **Vite** for fast bundling. 
-
 Overview of the key directories and files:
 
 - **`src/`**: Contains the main source code, including views and components.
