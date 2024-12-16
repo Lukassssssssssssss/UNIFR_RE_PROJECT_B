@@ -13,7 +13,7 @@ Ensure you have the following installed on your machine:
 ## Installation Instructions
 1. **Clone the Repository**  
    Open your terminal and run:
-   ```git clone``` https://github.com/Lukassssssssssssss/UNIFR_RE_PROJECT_B
+   ```git clone https://github.com/Lukassssssssssssss/UNIFR_RE_PROJECT_B ```
 
 2. **Navigate to the project Directory**  
    Change to the directory where the repository was cloned:
