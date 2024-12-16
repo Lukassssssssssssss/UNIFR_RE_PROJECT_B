@@ -4,19 +4,23 @@
   box-sizing: border-box;
 }
 
+/* Ensure html and body take full height and apply a consistent font style */
 html,
 body {
   height: 100%;
   font-family: Arial, sans-serif;
 }
 
+/* Main container for the dashboard page */
 .dashboard-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* Set background image for page with fixed positioning and cover the entire container */
   background: url("/src/views/Dashboard/unibild.png") no-repeat center center fixed;
   background-size: cover;
 
+  /* Styling for the navigation bar */
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -28,10 +32,12 @@ body {
     top: 0;
     z-index: 100;
 
+    /* Logo styling within the navbar */
     .logo img {
       max-height: 50px;
     }
 
+    /* Styling for the navigation menu */
     .menu {
       list-style: none;
       display: flex;
@@ -44,6 +50,7 @@ body {
         padding: 5px 10px;
         border-radius: 5px;
 
+        /* Hover and active state for menu items */
         &.active,
         &:hover {
           background-color: #f6a821;
@@ -51,6 +58,7 @@ body {
       }
     }
 
+    /* Styling for the logout button */
     .logout button {
       background-color: #f6a821;
       color: white;
@@ -59,22 +67,26 @@ body {
       cursor: pointer;
       border-radius: 5px;
 
+      /* Hover effect for logout button */
       &:hover {
         background-color: #4b4b4b;
       }
     }
   }
 
+  /* Main content area below the fixed navbar */
   .content {
-    margin-top: 80px; /* Platz für Navbar */
+    margin-top: 80px;
     padding: 30px;
   }
 
+  /* Flex container for the dashboard content */
   .dashboard-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
+    /* Styling for the notifications box */
     .notifications {
       background: #e9ecef;
       padding: 20px;
@@ -82,6 +94,7 @@ body {
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    /* Styling for the welcome box */
     .welcome-box {
       text-align: center;
       background-color: rgba(246, 168, 33, 0.9);

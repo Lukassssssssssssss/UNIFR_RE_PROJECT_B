@@ -1,6 +1,8 @@
+// Import necessary modules from Aurelia
 import { IRoute } from "@aurelia/router";
 import { customElement } from "aurelia";
 
+// Define MyApp custom element and its template
 @customElement({
   name: "my-app",
   template: `<template>
@@ -8,6 +10,8 @@ import { customElement } from "aurelia";
   </template>`,
 })
 export class MyApp {
+
+  // Define the routes for the application
   static routes: IRoute[] = [
     {
       path: ["", "login"],

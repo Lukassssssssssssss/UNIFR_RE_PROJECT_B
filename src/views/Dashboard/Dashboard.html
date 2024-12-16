@@ -1,11 +1,18 @@
 <template>
+
+  <!-- Importing the associated SCSS file for styling this component -->
   <require from="./dashboard.scss"></require>
 
+  <!-- Container for the dashboard page -->
   <div class="dashboard-container">
+    <!-- Navigation bar at the top of the page -->
     <nav class="navbar">
+      <!-- Logo section in the navbar -->
       <div class="logo">
         <img src="/src/views/login/logo.png" alt="UniFr Logo" />
       </div>
+
+      <!-- Menu links for navigating between different pages -->
       <ul class="menu">
         <li><a href="/dashboard" class="active">Home</a></li>
         <li><a href="/courses">Courses</a></li>
@@ -13,15 +20,21 @@
         <li><a href="/billing">Billing</a></li>
         <li><a href="/notifications">Notifications</a></li>
       </ul>
+
+      <!-- Logout button for ending the session -->
       <div class="logout">
         <button click.trigger="logout()">Log Out</button>
       </div>
     </nav>
 
+    <!-- Content area of the dashboard page -->
     <div class="content">
       <div class="dashboard-content">
+        <!-- Section displaying user notifications -->
         <div class="notifications">
+          <!-- Label indicating the number of new messages -->
           <label>1 New Message</label>
+          <!-- List of notifications -->
           <ul>
             <li>Notification by Admin: "Welcome"</li>
             <li>Notification by Prof. Meier: "Course"</li>
@@ -29,6 +42,8 @@
             <li>Notification by Prof. Bob: "Grading"</li>
           </ul>
         </div>
+
+        <!-- Welcome message box -->
         <div class="welcome-box">
           <h1>Welcome to your UniFr Account</h1>
         </div>

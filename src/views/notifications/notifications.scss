@@ -1,105 +1,117 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  .notifications-container {
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html and body take full height and apply a consistent font */
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container for the notifications page */
+.notifications-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #e3f2fd, #b0d7f1);
+
+  /* Navigation bar styling */
+  .navbar {
     display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom, #e3f2fd, #b0d7f1);
-  
-    .navbar {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a2a4b;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+    /* Styling for the logo inside the navigation bar */
+    .logo img {
+      max-height: 50px;
+    }
+
+    /* Styling for the menu links */
+    .menu {
+      list-style: none;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #1a2a4b;
-      padding: 10px 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-  
-      .logo img {
-        max-height: 50px;
-      }
-  
-      .menu {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-  
-        li a {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-          padding: 5px 10px;
-          border-radius: 5px;
-  
-          &.active,
-          &:hover {
-            background-color: #b0d7f1;
-          }
-        }
-      }
-  
-      .logout button {
-        background-color: #b0d7f1;
-        color: #1a2a4b;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
+      gap: 20px;
+
+      li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
         border-radius: 5px;
-  
+
+        &.active,
         &:hover {
-          background-color: #1a2a4b;
-          color: white;
+          background-color: #b0d7f1;
         }
       }
     }
-  
-    .content {
-      margin-top: 100px; // Abstand von der fixierten Navbar
-      padding: 20px;
-  
-      h1 {
-        text-align: center;
-        color: #1a2a4b;
+
+    /* Styling for the logout button */
+    .logout button {
+      background-color: #b0d7f1;
+      color: #1a2a4b;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+
+      /* Change background color when hovered */
+      &:hover {
+        background-color: #1a2a4b;
+        color: white;
       }
-  
-      .notification-list {
-        margin-top: 20px;
-        list-style: none;
-        padding: 0;
-  
-        li {
-          background: #ffffff;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          margin-bottom: 10px;
-          padding: 15px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-          .date {
-            font-weight: bold;
-            color: #1a2a4b;
-            display: block;
-            margin-bottom: 5px;
-          }
-  
-          p {
-            margin: 0;
-            color: #333;
-          }
+    }
+  }
+
+  /* Main content styling */
+  .content {
+    margin-top: 100px;
+    padding: 20px;
+
+    /* Heading styling */
+    h1 {
+      text-align: center;
+      color: #1a2a4b;
+    }
+
+    /* List of notifications */
+    .notification-list {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+
+      /* Notification item styling */
+      li {
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        /* Date styling */
+        .date {
+          font-weight: bold;
+          color: #1a2a4b;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        /* Text inside the notification */
+        p {
+          margin: 0;
+          color: #333;
         }
       }
     }
   }
-  
+}

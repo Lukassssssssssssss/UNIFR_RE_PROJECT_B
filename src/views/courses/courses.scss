@@ -4,33 +4,38 @@
   box-sizing: border-box;
 }
 
+/* Ensures html and body elements take full height of viewport */
 html,
 body {
   height: 100%;
   font-family: Arial, sans-serif;
 }
 
+/* Container for the courses page */
 .courses-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #e3f2fd, #b0d7f1); /* Hellblau-Verlauf */
+  background: linear-gradient(to bottom, #e3f2fd, #b0d7f1);
 
+  /* Navigation bar styling */
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a2a4b; /* Tiefes Blau für Header */
+    background-color: #1a2a4b;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
 
+    /* Logo image inside bar */
     .logo img {
       max-height: 50px;
     }
 
+    /* Styling for menu inside navigation bar */
     .menu {
       list-style: none;
       display: flex;
@@ -43,49 +48,59 @@ body {
         padding: 5px 10px;
         border-radius: 5px;
 
+        /* When link is active/hovered change the background color */
         &.active,
         &:hover {
-          background-color: #b0d7f1; /* Hellblau für Hover */
+          background-color: #b0d7f1;
+          /* Hellblau für Hover */
         }
       }
     }
 
+    /* Styling for logout button in navigation bar */
     .logout button {
       background-color: #b0d7f1;
-      color: #1a2a4b; /* Blau für Kontrast */
+      color: #1a2a4b;
       border: none;
       padding: 10px 15px;
       cursor: pointer;
       border-radius: 5px;
 
+      /* Change button style when hovered */
       &:hover {
         background-color: #1a2a4b;
-        color: white; /* Weiß für Hover-Text */
+        color: white;
+        /* Weiß für Hover-Text */
       }
     }
   }
 
+  /* Main content section */
   .content {
     margin-top: 100px;
     padding: 20px;
 
+    /* Styling for the main heading */
     h1 {
       text-align: center;
-      color: #1a2a4b; /* Tiefes Blau für Text */
+      color: #1a2a4b;
     }
 
+    /* Table styling */
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+      /* Styling for the table headers */
       th {
-        background-color: #b0d7f1; /* Hellblau für Header */
-        color: #1a2a4b; /* Dunkelblau für Text */
+        background-color: #b0d7f1;
+        color: #1a2a4b;
         padding: 10px;
       }
 
+      /* Styling for table cells */
       td,
       th {
         padding: 12px;
@@ -93,12 +108,14 @@ body {
         border: 1px solid #ddd;
       }
 
+      /* Zebra-striping effect for even rows */
       tr:nth-child(even) {
-        background-color: #eaf5fc; /* Noch helleres Blau für Abwechslung */
+        background-color: #eaf5fc;
       }
 
+      /* Hover effect for rows */
       tr:hover {
-        background-color: #d6ebf9; /* Mittleres Blau beim Hover */
+        background-color: #d6ebf9;
       }
     }
   }
