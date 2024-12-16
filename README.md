@@ -17,7 +17,7 @@ Ensure you have the following installed on your machine:
 
 2. **Navigate to the project Directory**  
    Change to the directory where the repository was cloned:
-   ```cd``` UNIFR_RE_PROJECT_B
+   ```cd UNIFR_RE_PROJECT_B```
 
 3. **Install Dependencies** 
     Install the necessary dependencies by running:
